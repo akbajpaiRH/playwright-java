@@ -15,5 +15,19 @@ public class playwrightLocator {
         System.out.println(lgn.count());
 
         lgn.first().click();
+        p1.close();
+        bcx1.close();
+
+        BrowserContext bcx2 = browser.newContext();
+		Page p2 = bcx2.newPage();
+        p2.navigate("https://www.orangehrm.com/orangehrm-30-day-trial/");
+
+        Locator country = p2.locator("select#Form_getForm_Country option");
+        for(int i=0;i<country.count();i++){
+            String text = country.nth(i).textContent();
+            System.out.println(text);
+        }
+        p2.close();
+        bcx2.close();
     }
 }

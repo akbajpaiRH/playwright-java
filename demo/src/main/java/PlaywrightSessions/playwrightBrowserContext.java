@@ -11,7 +11,9 @@ public class playwrightBrowserContext {
 		Page p1 = bcx1.newPage();
 		p1.navigate("https://www.orangehrm.com/orangehrm-30-day-trial/");
 		p1.fill("#Form_getForm_subdomain", "Akash");
-		System.out.println(p1.title());
+		
+		System.out.println(p1.title()); //Form_getForm_Country
+
 		
 		BrowserContext bcx2 = browser.newContext();
 		Page p2 = bcx1.newPage();
