@@ -2,8 +2,6 @@ package PlaywrightSessions;
 
 import java.util.List;
 
-import javax.swing.plaf.synth.SynthLookAndFeel;
-
 import com.microsoft.playwright.*;
 
 public class playwrightLocator {
