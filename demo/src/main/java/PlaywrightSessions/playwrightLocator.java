@@ -40,7 +40,8 @@ public class playwrightLocator {
         
         Page page = browser.newPage();
         page.navigate("https://demo.opencart.com/index.php?route=account/login&language=en-gb");
-
+        
+        // text-selector
         Locator l1 = page.locator("div.card-body h2:has-text('New Customer')"); // parent-child relationship
         System.out.println(l1.textContent());
 
@@ -50,12 +51,6 @@ public class playwrightLocator {
         page.locator("form button:has-text('Login')").click();
         Locator l3 = page.locator("div.card-body a:has-text('Continue')");
         l3.click();
-
-        page.navigate("https://www.formsite.com/templates/registration-form-templates/vehicle-registration-form/");
-
-        page.locator("div.details__form-image img").click();
-
-        page.frameLocator("//iframe[contains(@id,'frame-one')]").locator("#RESULT_TextField-8").fill("Akash Bajpai");
         
         System.exit(0);
     }
