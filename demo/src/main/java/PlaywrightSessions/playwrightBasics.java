@@ -10,7 +10,7 @@ public class playwrightBasics {
 
         Playwright playwright= Playwright.create();
 
-        Browser browser =playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        Browser browser =playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 
         Page page = browser.newPage();
         page.navigate("https://www.amazon.com");
